@@ -7,104 +7,144 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #F8F4E6; /* fundo bege claro */
+            color: #3B003B; /* texto roxo escuro */
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
+
         header {
-            background-color: #6f50dd;
-            color: white;
+            background-color: #6A0DAD; /* roxo escuro */
+            color: #FFF;
+            padding: 20px;
             text-align: center;
-            padding: 1rem;
         }
+
         nav {
-            background-color: #333;
-            color: white;
-            padding: 10px;
+            background-color: #9B30FF; /* roxo mais claro */
+            padding: 15px;
             text-align: center;
         }
-        nav a {
-            color: white;
-            padding: 10px 15px;
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
             text-decoration: none;
+            color: #FFF;
+            padding: 10px 20px;
+            display: block;
         }
-        nav a:hover {
-            background-color: #575757;
+
+        nav ul li:hover > ul {
+            display: block;
         }
-        .container {
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #6A0DAD; /* roxo escuro */
+        }
+
+        nav ul ul li {
+            display: block;
+        }
+
+        section {
             padding: 20px;
         }
-        .section {
-            margin-bottom: 30px;
-            padding: 15px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        .photo-section {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #6A0DAD;
+            padding-bottom: 20px;
         }
-        footer {
+
+        .photo-section img {
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .photo-section h3 {
             text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            margin-top: 20px;
+            font-size: 16px;
+            color: #6A0DAD;
         }
-        img {
+
+        footer {
+            background-color: #9B30FF;
+            color: #FFF;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
             width: 100%;
-            max-width: 600px;
-            border-radius: 5px;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Memórias Escolares</h1>
-</header>
+    <header>
+        <h1>Memórias Escolares</h1>
+    </header>
 
-<nav>
-    <a href="#ensino-medio">Ensino Médio</a>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Fotos</a>
+                <ul>
+                    <li><a href="#">Ano 1</a></li>
+                    <li><a href="#">Ano 2</a></li>
+                    <li><a href="#">Ano 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
 
-<div class="container">
-        <p><strong>Data:</strong> 29/03/2023 </p>
-        <p><strong>Relato:</strong>O dia que o Nabosne virou um pouco mandrake no caminho de ida para a volvo  </p>
-        <img src="mandrake.jpg" alt="Fundamental">
-    </div>
+    <section>
+        <div class="photo-section">
+            <h3>29/03/2023 - O dia que o Nabosne virou um pouco mandrake no caminho de ida para a volvo</h3>
+            <img src="mandrake.jpg" alt="Um Mandrake na Volvo">
+        </div>
 
-        <p><strong>Data:</strong> 16/03/2023 </p>
-        <p><strong>Relato:</strong> O que rolou com o Fernando ? Seila , mas é isso  </p>
-        <img src="fernandobiruta.jpg" alt="Fundamental">
-    </div>
+        <div class="photo-section">
+            <h3>16/032023 - O que rolou com o Fernando? Sei lá, mas é isso...</h3>
+            <img src="fernandobiruta.jpg" alt="Frnando meio loko">
+        </div>
 
-        <p><strong>Data:</strong> 17/09/2024 </p>
-        <p><strong>Relato:</strong>O Fernando sendo Fernando,  me mandando pra aquele lugar  com cara de nojento.  </p>
-        <img src="fernandonojo.jpg" alt="Ensino Médio">
+        <div class="photo-section">
+            <h3>17/09/2024 - O Fernando sendo Fernando, me mandando pra aquele lugar com cara de nojento</h3>
+            <img src="fernandonojo.jpg" alt="Esse Fernando...">
+        </div>
 
-    </div>
-</div>
+        <div class="photo-section">
+            <h3>22/06/2024 - O dia que o grupo Baixa Renda se juntou para jogar queimada e comer um pouco(10 pizzas)</h3>
+            <img src="estalero.jpg" alt="Baixa Renda no Estaleirinho">
+        </div>
 
-        <p><strong>Data:</strong> 22/06/2024 </p>
-        <p><strong>Relato:</strong> O dia que o grupo baixa renda se juntou para jogar queimada , e comer um pouco ( 10 pizza )  
-    </p>
-        <img src="estalero.jpg" alt="Ensino Médio">
-    </div>
-</div>
+        <div class="photo-section">
+            <h3>15/04/2024 - E não poderia faltar a minha melhor lembrança, quando eu e a Dayane começamos a nos relacionar(Obrigado nhoque!)</h3>
+            <img src="eoamor.jpg" alt="Lembrança">
+        </div>
+    </section>
 
-        <p><strong>Data:</strong> 15/04/2024 </p>
-        <p><strong>Relato:</strong> E não poderia faltar a minha melhor lembrança, quando eu e a Dayane começamos a nos relacionar ( obrigado nhoque) . 
-    </p>
-        <img src="eoamor.jpg" alt="Ensino Médio">
-    </div>
-</div>
-
- </div>   
-
-<footer>
-    <p>Colégio Padre Cláudio Morelli | Kamyla Lima | Nº 7</p>
-</footer>
+    <footer>
+        <p>Colégio Estadual Pe. Cládio Morelli  -  Kamyla Vitoria Martendal de Lima  nº20</p>
+    </footer>
 
 </body>
 </html>
